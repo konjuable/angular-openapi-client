@@ -1,0 +1,10 @@
+Ohje: https://pguso.medium.com/generate-openapi-angular-client-8c9288e8bbd4
+
+# install the latest version of "openapi-generator-cli"
+npm install @openapitools/openapi-generator-cli -g
+
+# switch into a folder where you want to create the client
+cd angular-openapi-client
+
+# generate the client
+openapi-generator-cli generate -g typescript-angular -i ./openapi.json -o ./  --additional-properties npmName=slim-api,snapshot=false,ngVersion=13.3.0,npmVersion=8.5.0
